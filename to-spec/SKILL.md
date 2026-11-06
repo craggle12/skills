@@ -16,6 +16,14 @@ Check with the user that these seams match their expectations.
 
 3. Write the spec using the template below, then publish .claude/specs in the current repo
 
+## Overview Diagram (mandatory)
+
+Every spec MUST include a Mermaid `flowchart` showing the general premise of the idea — the main actors, steps and outcomes at a glance,
+not implementation detail. Keep it small (roughly 5–15 nodes) and use the same vocabulary as the rest of the spec.
+
+Only omit it when the user has explicitly said to. If you believe the idea genuinely can't be expressed as a diagram, ask the user before
+omitting it — never drop it silently.
+
 ## Formatting
 
 Hard-wrap all prose (paragraphs and list items) at ~140 columns — break lines manually with real newlines rather than emitting single long lines. This keeps the spec readable in editors/terminals without horizontal scrolling. Headings, code fences, and inline code spans are exempt.
@@ -29,6 +37,18 @@ The problem that the user is facing, from the user's perspective.
 ## Solution
 
 The solution to the problem, from the user's perspective.
+
+## Overview Diagram
+
+A Mermaid flowchart of the general premise (see "Overview Diagram (mandatory)" above).
+
+```mermaid
+flowchart TD
+    A[Actor / trigger] --> B[Key step]
+    B --> C{Decision}
+    C -->|yes| D[Outcome]
+    C -->|no| E[Alternative outcome]
+```
 
 ## User Stories
 

@@ -14,7 +14,7 @@ Use this skill to convert initial requirements into a concrete, agreed spec. The
 3. Ask focused questions in small batches.
 4. Incorporate the user's answers into a working spec.
 5. Repeat until there are no material open questions.
-6. Save the agreed spec as Markdown if requested. We normally make a spec using /to-spec skill
+6. Save the agreed spec as Markdown if requested. We normally make a spec using either the /to-spec skill (full) or the /to-spec-simple skill (short)
 
 Do not start implementation work while using this skill unless the user explicitly exits the spec process and asks to implement.
 
