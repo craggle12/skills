@@ -46,7 +46,7 @@ conversation has no such discussion, stop: write nothing and tell the user to ru
    - Delete generic advice (e.g. what makes a good test — the `tdd` skill covers that).
    - Check every section is within its length budget.
 
-5. Publish to `.claude/specs/` in the current repo.
+5. Publish to `.specs/` in the current repo.
 
 ## Formatting
 
