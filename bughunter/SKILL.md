@@ -1,3 +1,8 @@
+---
+name: bughunter
+description: Performs recursive static code analysis to identify genuine software defects, including logic errors, concurrency issues, security vulnerabilities, and distributed systems bugs. Produces a self-contained HTML report with up to 15 severity-ranked findings. Use when asked to scan, audit, or inspect a directory for software bugs.
+---
+
 # BugHunter
 
 ## Purpose
