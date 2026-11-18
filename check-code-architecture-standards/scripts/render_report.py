@@ -14,6 +14,7 @@ PRINCIPLES = {
     "etc": ("Easy to Change", "The meta-principle: good design is design that is easy to change."),
     "dry": ("DRY", "Every piece of knowledge has a single, authoritative representation."),
     "orthogonality": ("Orthogonality", "Independent, cohesive components; changes don’t ripple."),
+    "module_depth": ("Module Depth", "How much work a module hides behind its public contract."),
     "reversibility": ("Reversibility", "No final decisions; avoid unnecessary lock-in."),
     "broken_windows": ("Broken Windows", "Small signs of neglect invite more decay."),
     "tracer_bullets": ("Tracer Bullets", "A thin, working end-to-end path you can build on."),

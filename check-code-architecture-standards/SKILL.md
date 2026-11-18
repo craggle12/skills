@@ -1,6 +1,6 @@
 ---
 name: check-code-architecture-standards
-description: Review the architecture of a codebase against the principles of "The Pragmatic Programmer" (DRY, orthogonality, reversibility, broken windows, tracer bullets, design by contract, crash early, testability, automation, programming by coincidence) and write the findings to a self-contained HTML report in the reviewed directory. Use this whenever the user asks for an architecture review, code health check, design audit, technical debt assessment, coupling or duplication analysis, or asks how "pragmatic" or maintainable a codebase is, even if they don't mention the book by name.
+description: Review the architecture of a codebase using principles from "The Pragmatic Programmer" (DRY, orthogonality, reversibility, broken windows, tracer bullets, design by contract, crash early, testability, automation, programming by coincidence) and John Ousterhout’s module depth principle from A Philosophy of Software Design, and write the findings to a self-contained HTML report in the reviewed directory. Use this whenever the user asks for an architecture review, code health check, design audit, technical debt assessment, coupling or duplication analysis, a check for deep or shallow modules, or asks how "pragmatic" or maintainable a codebase is, even if they don't mention the book by name.
 ---
 
 # Pragmatic Architecture Review
@@ -36,6 +36,8 @@ Before judging anything, understand what the system is for and how it is put tog
 ### 4. Review through each lens
 
 Read `references/principles.md` now. It lists each principle, what it looks like in code, concrete signals and how to judge severity. Work through every lens, following scanner leads and sampling code yourself. For large codebases, prioritise the core domain, the most-imported modules and the largest files rather than trying to read everything.
+
+For the Module depth lens, trace one or two representative callers per significant boundary in scope. Include public HTTP responses and framework entry points where relevant. Record the operations callers use, the work and decisions the module hides, and the implementation knowledge callers still need. Name a plausible internal change and identify which callers, public contracts, or tests it would affect. For a substantial redesign recommendation, compare two plausible interfaces against the same caller and change.
 
 For each lens give a rating (`good`, `mixed` or `concern`) and a one-or-two-sentence summary. Record findings with:
 
